@@ -4,17 +4,11 @@
     "description": "Read Star Advertiser Subscriber Articles For Free!",
     "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
     "background": {
-        "scripts": ["scripts/background.js"],
+        "scripts": ["scripts/background.js", "scripts/getArticle.js"],
         "persistent": false
     },
     "page_action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "images/star_advertiser.png",
-            "32": "images/star_advertiser.png",
-            "48": "images/star_advertiser.png",
-            "128": "images/star_advertiser.png"
-        }
+        "default_icon": "images/star_advertiser.png"            
     },
     "icons": {
         "16": "images/star_advertiser.png",

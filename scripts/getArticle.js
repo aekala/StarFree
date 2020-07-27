@@ -36,7 +36,9 @@ function renderArticle(article) {
 }
 
 function onWindowLoad() {
-    getDOM();
+    chrome.pageAction.onClicked.addListener(function(tab) {
+        getDOM();    
+    });
 }
 
 window.onload = onWindowLoad();
