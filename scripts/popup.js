@@ -1,15 +1,24 @@
-let changeColor = document.getElementById('changeColor');
-
-  chrome.storage.sync.get('color', function(data) {
-    changeColor.style.backgroundColor = data.color;
-    changeColor.setAttribute('value', data.color);
-  });
-  
-  changeColor.onclick = function(element) {
-    let color = element.target.value;
+function getDOM() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      chrome.tabs.executeScript(
-          tabs[0].id,
-          {code: 'document.body.style.backgroundColor = "' + color + '";'});
+        chrome.tabs.get(tabs[0].id, function(currentTab) {
+            let url = currentTab.url;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.responseType = "document";
+            xhr.onload = function() {
+                getStarAdvertiserArticle(xhr.response)
+            }
+            xhr.send();
+        }) 
     });
-  };
+}
+
+function getStarAdvertiserArticle(document) {
+    chrome.extension.getBackgroundPage().console.log(document.getElementById("hsa-paywall-content"));                
+}
+
+function onWindowLoad() {
+    getDOM();
+}
+
+window.onload = onWindowLoad();

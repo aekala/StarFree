@@ -2,7 +2,7 @@
     "name": "FreeStarAdvertiser",
     "version": "1.0",
     "description": "Read Star Advertiser Subscriber Articles For Free!",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "permissions": ["https://*/", "tabs", "activeTab", "declarativeContent", "storage"],
     "background": {
         "scripts": ["scripts/background.js"],
         "persistent": false
