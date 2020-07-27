@@ -9,12 +9,25 @@ function getDOM() {
                 getStarAdvertiserArticle(xhr.response)
             }
             xhr.send();
-        }) 
+        });
     });
 }
 
 function getStarAdvertiserArticle(document) {
-    chrome.extension.getBackgroundPage().console.log(document.getElementById("hsa-paywall-content"));                
+    let article = document.getElementById("hsa-paywall-content").innerHTML;
+    chrome.extension.getBackgroundPage().console.log(document.getElementById("hsa-paywall-content").innerHTML);  
+    renderArticle();              
+}
+
+function renderArticle(article) {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.insertCSS(
+            tabs[0].id,
+            {
+                code: "#hsa-paywall-overlay { display: none }"
+            }
+        )
+        });
 }
 
 function onWindowLoad() {
