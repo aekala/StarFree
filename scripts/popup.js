@@ -19,12 +19,14 @@ function getStarAdvertiserArticle(document) {
     for (let i = 0; i < articleDOMChildren.length; i++) {
         article += articleDOMChildren.item(i).innerHTML + "<br><br>";
     }
+    chrome.extension.getBackgroundPage().console.log(article);  
+    article = article.replace(/"/g, "\\\"");    // escape quotes so they don't cause syntax problems when changing the HTML 
+    chrome.extension.getBackgroundPage().console.log(article);  
     renderArticle(article);              
 }
 
 function renderArticle(article) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.extension.getBackgroundPage().console.log(article);  
         chrome.tabs.executeScript(
             tabs[0].id,
             {
