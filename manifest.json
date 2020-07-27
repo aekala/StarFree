@@ -2,7 +2,7 @@
     "name": "FreeStarAdvertiser",
     "version": "1.0",
     "description": "Read Star Advertiser Subscriber Articles For Free!",
-    "permissions": ["https://*/", "tabs", "activeTab", "declarativeContent", "storage"],
+    "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
     "background": {
         "scripts": ["scripts/background.js"],
         "persistent": false
@@ -10,17 +10,17 @@
     "page_action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "images/get_started16.png",
-            "32": "images/get_started32.png",
-            "48": "images/get_started48.png",
-            "128": "images/get_started128.png"
+            "16": "images/star_advertiser.png",
+            "32": "images/star_advertiser.png",
+            "48": "images/star_advertiser.png",
+            "128": "images/star_advertiser.png"
         }
     },
     "icons": {
-        "16": "images/get_started16.png",
-        "32": "images/get_started32.png",
-        "48": "images/get_started48.png",
-        "128": "images/get_started128.png"
+        "16": "images/star_advertiser.png",
+        "32": "images/star_advertiser.png",
+        "48": "images/star_advertiser.png",
+        "128": "images/star_advertiser.png"
     },
     "manifest_version": 2
 }
