@@ -14,17 +14,21 @@ function getDOM() {
 }
 
 function getStarAdvertiserArticle(document) {
-    let article = document.getElementById("hsa-paywall-content").innerHTML;
-    chrome.extension.getBackgroundPage().console.log(document.getElementById("hsa-paywall-content").innerHTML);  
-    renderArticle();              
+    let article = "";
+    let articleDOMChildren = document.getElementById("hsa-paywall-content").children;
+    for (let i = 0; i < articleDOMChildren.length; i++) {
+        article += articleDOMChildren.item(i).innerHTML + "<br><br>";
+    }
+    renderArticle(article);              
 }
 
 function renderArticle(article) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.insertCSS(
+        chrome.extension.getBackgroundPage().console.log(article);  
+        chrome.tabs.executeScript(
             tabs[0].id,
             {
-                code: "#hsa-paywall-overlay { display: none }"
+                code: "document.getElementById(\"hsa-paywall-overlay\").innerHTML = \"" + article + "\""
             }
         )
         });
