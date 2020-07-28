@@ -1,5 +1,5 @@
 # StarFree
-![Star Advertister Logo](https://www.catholiccharitieshawaii.org/wp-content/uploads/2016/04/Star-Advertiser-logo.jpg)
+![Star Advertister Logo](images/star_advertiser_logo_banner.jpg)
 **A Google Chrome Extension to Read Star Advertiser Premium Articles For Free**
 
 ## Setup
@@ -8,7 +8,7 @@ You can do this by downloading the .zip file and then extracting it to a folder.
 
 Before you can load this extension into Google Chrome, you'll have to enable "Developer mode" by typing in "chrome://extensions/" in your search browser and enabling the setting there. 
 
-![Enable Developer Mode](https://cdnblog.webkul.com/blog/wp-content/uploads/2019/07/15065714/3-2.png)
+![Enable Developer Mode](images/chrome_extension_devmode_diagram.png)
 
 Once you have Developer mode enabled, click "Load unpacked" on the "chrome://extensions/" page and select the folder you previously unzipped the project to. You should see the extension now.
 
