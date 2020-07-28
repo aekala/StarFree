@@ -1,7 +1,7 @@
 {
-    "name": "FreeStarAdvertiser",
+    "name": "StarFree",
     "version": "1.0",
-    "description": "Read Star Advertiser Subscriber Articles For Free!",
+    "description": "Read Star Advertiser Premium Articles For Free",
     "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
     "background": {
         "scripts": ["scripts/background.js", "scripts/getArticle.js"],
