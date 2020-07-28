@@ -10,7 +10,7 @@ Before you can load this extension into Google Chrome, you'll have to enable "De
 
 ![Enable Developer Mode](images/chrome_extension_devmode_diagram.png)
 
-Once you have Developer mode enabled, click "Load unpacked" on at [chrome://extensions/](chrome://extensions/) and select the folder you previously unzipped the project to. You should see the extension now.
+Once you have Developer mode enabled, click "Load unpacked" on the "chrome://extensions/" page and select the folder you previously unzipped the project to. You should see the extension now.
 
 
 ## Using StarFree
