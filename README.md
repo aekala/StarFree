@@ -18,4 +18,4 @@ The icon for this Google Chrome extension will be grayed out on websites that ar
 Whenever you navigate to [Star Advertiser](https://www.staradvertiser.com/), and click on a Premium Article, the extension icon will light up. 
 All you need to do is click on the icon and the article will be unlocked for you to read! 
 
-![StarFree Demo](https://drive.google.com/file/d/1lzRkNOHnsKXDUwVJNMeltleQ5qjU6biP/view?usp=sharing)
+![StarFree Demo](images/starfree_demo.gif)
