@@ -19,7 +19,9 @@ function getStarAdvertiserArticle(document) {
     let article = "";
     let articleDOMChildren = document.getElementById("hsa-paywall-content").children;
     for (let i = 0; i < articleDOMChildren.length; i++) {
-        article += articleDOMChildren.item(i).innerHTML + "<br><br>";
+        // Star Advertiser uses a Line feed (LF) Unicode control code (U+000A)
+        // we need to remove that character so it doesn't cause issues when inserting the text back into the HTML
+        article += (articleDOMChildren.item(i).innerHTML + "<br><br>").replace(/\u000A/g, "");
     }
     article = article.replace(/"/g, "\\\"");    // escape quotes so they don't cause syntax problems when changing the HTML 
     renderArticle(article);              
