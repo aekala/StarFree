@@ -2,19 +2,17 @@
     "name": "StarFree",
     "version": "1.0",
     "description": "Read Star Advertiser Premium Articles For Free",
-    "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
-    "background": {
-        "scripts": ["scripts/background.js", "scripts/getArticle.js"],
-        "persistent": false
-    },
-    "page_action": {
-        "default_icon": "images/star_advertiser.png"            
-    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.staradvertiser.com/*"],
+            "js": ["scripts/getArticle.js"]
+        }
+    ],
     "icons": {
         "16": "images/star_advertiser.png",
         "32": "images/star_advertiser.png",
         "48": "images/star_advertiser.png",
         "128": "images/star_advertiser.png"
     },
-    "manifest_version": 2
+    "manifest_version": 3
 }
