@@ -14,6 +14,4 @@ Once you have Developer mode enabled, click "Load unpacked" on the "chrome://ext
 
 
 ## Using StarFree
-Whenever you navigate to [Star Advertiser](https://www.staradvertiser.com/), and click on a Premium Article, the article will automatically be unlocked for you to read!
-
-![StarFree Demo](images/starfree_demo.gif)
+Whenever you navigate to [Star Advertiser](https://www.staradvertiser.com/), and click on a Premium Article, the article will automatically be unlocked for you to read
